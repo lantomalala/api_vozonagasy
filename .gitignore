@@ -1,0 +1,52 @@
+# Node modules
+node_modules/
+
+# npm log files
+npm-debug.log*
+yarn-error.log*
+
+# Dependency directories (for some package managers)
+.pnp/
+.pnp.js
+
+# .env file for environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Build directories (if using build tools like webpack, etc.)
+dist/
+build/
+
+# Testing directories and files
+coverage/
+*.lcov
+
+# Package lock files (optional, depending on the use of yarn vs npm)
+package-lock.json
+yarn.lock
+
+# Docker files (if using Docker)
+.docker/
+
+# Other generated files or folders (customize for your project)
+debug/
+temp/

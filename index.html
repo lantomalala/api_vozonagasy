@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="https://i.pinimg.com/1200x/96/b7/3b/96b73bc8a7f3f3899d796f143eb831ed.jpg" style="border-radius: 50;"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vozona Gasy API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #5f7d9b;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vozona Gasy</h1>
+
+    <p><strong>Vozona Gasy</strong> est une API simple et efficace qui permet de traduire du texte d'une langue source
+        (de votre choix) vers le <strong>Malgache</strong>. Cette API utilise une combinaison d'outils modernes pour
+        traiter les requêtes et retourner rapidement des traductions en texte brut.</p>
+
+    <hr>
+
+    <h2>Fonctionnalités principales</h2>
+
+    <ul>
+        <li>Traduction automatique de <strong>n'importe quelle langue</strong> en <strong>Malgache</strong>.</li>
+        <li>Gestion des requêtes HTTP POST pour soumettre le texte à traduire.</li>
+        <li>Retourne une réponse claire sous forme de texte décodé (sans entités HTML).</li>
+        <li>Rapide et facile à utiliser.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Technologies utilisées</h2>
+
+    <ul>
+        <li><strong>Node.js</strong> : Plateforme pour exécuter JavaScript côté serveur.</li>
+        <li><strong>Express</strong> : Framework web rapide et minimaliste pour créer l'API.</li>
+        <li><strong>Axios</strong> : Librairie pour effectuer des requêtes HTTP vers le service de traduction.</li>
+        <li><strong>html-entities</strong> : Librairie pour décoder les entités HTML.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Points d'entrée de l'API</h2>
+
+    <h3>1. <code>GET /</code></h3>
+
+    <ul>
+        <li><strong>Description</strong> : Point d'entrée de test, affiche un simple message apropos.</li>
+        <li><strong>Usage</strong> : Vérifier si le serveur est en ligne.</li>
+        <li><strong>Réponse</strong> :</li>
+    </ul>
+    <h3>2. <code>POST /translate</code></h3>
+
+    <ul>
+        <li><strong>Description</strong> : Traduit un texte fourni dans une langue source vers le
+            <strong>Malgache</strong>.</li>
+        <li><strong>Requête</strong> :
+            <ul>
+                <li><strong>Méthode</strong> : POST</li>
+                <li><strong>Headers</strong> :
+                    <ul>
+                        <li><code>Content-Type: application/json</code></li>
+                    </ul>
+                </li>
+                <li><strong>Body</strong> (en JSON) :</li>
+            </ul>
+        </li>
+    </ul>
+
+    <pre>
+        <code>
+            {
+                "text": "Texte à traduire",
+                "langue": "Langue source (ex : 'fr' pour français, 'en' pour anglais)"
+            }
+        </code>
+    </pre>
+
+    <ul>
+        <li><strong>Réponse</strong> (en JSON) :</li>
+    </ul>
+
+<pre>
+<code>
+{
+    "translation": "Texte traduit en Malgache",
+    "langue": "Langue source fournie"
+}
+</code>
+</pre>
+
+    <ul>
+        <li><strong>Codes de réponse</strong> :
+            <ul>
+                <li><code>200 OK</code> : Traduction réussie.</li>
+                <li><code>500 Internal Server Error</code> : Une erreur est survenue lors de la traduction.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2>Exemple d'utilisation</h2>
+
+    <h3>Requête</h3>
+
+<pre>
+<code>
+let xhr = new XMLHttpRequest();
+xhr.open('POST', 'http://localhost:1010/translate');
+xhr.setRequestHeader('Content-Type', 'application/json');
+let data = JSON.stringify({
+    text: "Bonjour tout le monde",
+    langue: "fr"
+});
+xhr.onload = () => {
+    if (xhr.status === 200) {
+        console.log(JSON.parse(xhr.responseText));
+    }
+};
+
+xhr.send(data);
+</code>
+</pre>
+
+    <h3>Réponse</h3>
+
+    <pre><code>{
+    "translation": "Miarahaba an'izao tontolo izao",
+    "langue": "fr"
+}</code></pre>
+
+    <hr>
+
+    <h2>Auteurs</h2>
+
+    <p>Développé par <strong>Justin</strong>  Lantomalala avec Node.js et passion pour la langue Malgache.</p>
+</body>
+
+</html>

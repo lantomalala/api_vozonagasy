@@ -1,0 +1,20 @@
+{
+  "name": "api_vozonagasy",
+  "version": "1.0.0",
+  "description": "C'est une API pour Vozona Gasy [https://vozonagasy.vercel.app/]",
+  "main": "api.js",
+  "type": "module",
+  "scripts": {
+    "devStart": "node api.js"
+  },
+  "author": "LANTOMALALA Justin",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "html-entities": "^2.5.2",
+    "node-fetch": "^3.3.2"
+  }
+}
