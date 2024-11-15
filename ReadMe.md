@@ -1,6 +1,6 @@
 Je comprends que vous souhaitez une version Markdown du contenu HTML, mais dans un format différent de ce que j'ai proposé précédemment. Je vais reformater le contenu en un seul fichier Markdown plus compact et lisible. Voici la nouvelle version :
 
-```markdown
+
  # Vozona Gasy# Vozona Gasy
 
 Vozona Gasy est une API simple et efficace qui permet de traduire du texte d'une langue source (de votre choix) vers le Malgache. Cette API utilise une combinaison d'outils modernes pour traiter les requêtes et retourner rapidement des traductions en texte brut.
@@ -39,7 +39,6 @@ Vozona Gasy est une API simple et efficace qui permet de traduire du texte d'une
         "langue": "Langue source (ex : 'fr' pour français, 'en' pour anglais)"
     }
 
-```
 
 - Réponse (JSON) :
 
